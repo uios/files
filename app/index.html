@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Files | uiOS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+        <link href="/index.css" rel="stylesheet">
+        <link href="/cdn/css/gg.css" rel="stylesheet">
+        <script src="/cdn/js/vanilla.js"></script>
+        <script src="/cdn/js/mvc.js"></script>
+        <script src="/cdn/js/router.js"></script>
+        <script src="/index.js"></script>
+    </head>
+    <body class="flex flex-direction-row flex-wrap-wrap" data-theme="meridiem">
+        <boot id="boot"></boot>
+        <header class="background-color-c3 position-fixed" data-height="50px" data-width="100%" data-z-index="5">
+            <row class="justify-content-space-between" data-width="100%">
+                <card class="-mobile-display-none">
+                    <row>
+                        <ico>
+                            <n class="gg-arrow-left"></n>
+                        </ico>
+                    </row>
+                    <row>
+                        <ico>
+                            <n class="gg-arrow-right"></n>
+                        </ico>
+                    </row>
+                    <row>
+                        <ico>
+                            <n class="gg-arrow-up"></n>
+                        </ico>
+                    </row>
+                </card>
+                <card class="box-sizing-border-box border-1px-solid flex-1 margin-2px">
+                    <form class="background-color-fff flex height-100pc justify-center" onsubmit="on.submit.index.path(event)">
+                        <input id="address-bar-path" type="text" value="C:\">
+                        <input type="submit">
+                    </form>
+                </card>
+                <card></card>
+            </row>
+        </header>
+        <nav class="background-color-ccc" data-width="320px">
+            <section>
+                <card>
+                    <section>
+                        <box>
+                            <row>
+                                <text>Quick Access</text>
+                            </row>
+                        </box>
+                    </section>
+                </card>
+                <card>
+                    <section></section>
+                </card>
+            </section>
+        </nav>
+        <main class="background-color-666 flex-1 scroll-y">
+            <page data-pages="/">
+                <blocks>
+                    <block>
+                        <section>
+                            <card>
+                                <section>
+                                    <box>
+                                        <section>
+                                            <ico>
+                                                <n></n>
+                                            </ico>
+                                            <text>Apps</text>
+                                        </section>
+                                    </box>
+                                    <box>
+                                        <section>
+                                            <ico>
+                                                <n></n>
+                                            </ico>
+                                            <text>People</text>
+                                        </section>
+                                    </box>
+                                    <box>
+                                        <section>
+                                            <ico>
+                                                <n></n>
+                                            </ico>
+                                            <text>OS</text>
+                                        </section>
+                                    </box>
+                                </section>
+                            </card>
+                        </section>
+                    </block>
+                </blocks>
+            </page>
+        </main>
+    </body>
+</html>
