@@ -583,6 +583,7 @@
     
   [data-columns="1"] { grid-template-columns: auto; }    
   [data-columns="2"] { grid-template-columns: auto auto; }
+  [data-columns="5"] { grid-template-columns: auto auto auto auto auto; }
     
   .grid-gap-10px, [data-grid-gap="10px"] { grid-gap: 10px; }    
   .grid-gap-30px, [data-grid-gap="30px"] { grid-gap: 30px; }
