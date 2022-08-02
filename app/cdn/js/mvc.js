@@ -11,7 +11,14 @@ window.mvc.v = view = function(route) {
 
         if (path) {
             const addressBarPath = byId('address-bar-path');
-            addressBarPath.value = "C:"+path.replace(/\//g,"\\");
+
+            var protocol = "cdn:";
+            if(get.length > 1) {
+                protocol = get[0]+":";
+            }
+            var got = get;
+            got.shift();
+            addressBarPath.value = protocol+(rout.ed.url(got).replace(/\//g,"\\"));
             
             log(route);
             resolve(route);

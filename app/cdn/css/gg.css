@@ -104,6 +104,38 @@
 }
 
 @media screen {
+    .gg-browser {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 24px;
+        height: 18px;
+        border: 2px solid;
+        border-radius: 3px
+    }
+
+    .gg-browser::after, .gg-browser::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        background: currentColor;
+        top: 4px
+    }
+
+    .gg-browser::after {
+        border-radius: 3px;
+        width: 2px;
+        box-shadow: 3px 0 0, 6px 0 0;
+        top: 1px;
+        left: 1px
+    }
+}
+
+@media screen {
     .gg-cloud {
         box-sizing: border-box;
         position: relative;
@@ -244,34 +276,113 @@
 }
 
 @media screen {
- .gg-google,
-.gg-google::before {
- box-sizing: border-box;
- display: block
+    .gg-folder {
+        transform: scale(var(--ggs,1))
+    }
+
+    .gg-folder, .gg-folder::after {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 22px;
+        height: 16px;
+        border: 2px solid;
+        border-radius: 3px
+    }
+
+    .gg-folder::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 4px;
+        border-bottom: 0;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        top: -5px
+    }
 }
 
-.gg-google {
- position: relative;
- transform: scale(var(--ggs,1));
- width: 20px;
- height: 20px;
- border: 4px solid;
- border-right-color: transparent;
- border-radius: 22px
+@media screen {
+    .gg-google, .gg-google::before {
+        box-sizing: border-box;
+        display: block
+    }
+
+    .gg-google {
+        position: relative;
+        transform: scale(var(--ggs,1));
+        width: 20px;
+        height: 20px;
+        border: 4px solid;
+        border-right-color: transparent;
+        border-radius: 22px
+    }
+
+    .gg-google::before {
+        content: "";
+        position: absolute;
+        border-top: 4px solid;
+        border-right: 4px solid;
+        border-bottom: 4px solid;
+        border-radius: 0 0 10px 0;
+        width: 10px;
+        height: 12px;
+        right: -4px;
+        bottom: -4px
+    }
 }
 
-.gg-google::before {
- content: "";
- position: absolute;
- border-top: 4px solid;
- border-right: 4px solid;
- border-bottom: 4px solid;
- border-radius: 0 0 10px 0;
- width: 10px;
- height: 12px;
- right: -4px;
- bottom: -4px
-}
+@media screen {
+    .gg-home {
+        background: linear-gradient(to left, currentColor 5px,transparent 0) no-repeat 0 bottom/4px 2px, linear-gradient(to left, currentColor 5px,transparent 0) no-repeat right bottom/4px 2px;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 18px;
+        height: 14px;
+        border: 2px solid;
+        border-top: 0;
+        border-bottom: 0;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-bottom: -2px
+    }
+
+    .gg-home::after, .gg-home::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute
+    }
+
+    .gg-home::before {
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-top-left-radius: 4px;
+        transform: rotate(45deg);
+        top: -5px;
+        border-radius: 3px;
+        width: 14px;
+        height: 14px;
+        left: 0
+    }
+
+    .gg-home::after {
+        width: 8px;
+        height: 10px;
+        border: 2px solid;
+        border-radius: 100px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+        left: 3px;
+        bottom: 0
+    }
 }
 
 @media screen {
@@ -348,26 +459,96 @@
 }
 
 @media screen {
- .gg-windows {
- transform: scale(var(--ggs,1))
+    .gg-shopping-bag {
+        transform: scale(var(--ggs,1))
+    }
+
+    .gg-shopping-bag, .gg-shopping-bag::after {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid;
+        border-radius: 3px
+    }
+
+    .gg-shopping-bag::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        border-bottom-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+        border-top: 0;
+        top: 2px;
+        left: 3px
+    }
 }
 
-.gg-windows,
-.gg-windows::before {
- display: block;
- position: relative;
- box-sizing: border-box;
- width: 17px;
- height: 15px
+@media screen {
+    .gg-software-upload {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 16px;
+        height: 6px;
+        border: 2px solid;
+        border-top: 0;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        margin-top: 8px
+    }
+
+    .gg-software-upload::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid;
+        border-top: 2px solid;
+        transform: rotate(45deg);
+        left: 2px;
+        bottom: 4px
+    }
+
+    .gg-software-upload::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        border-radius: 3px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+        left: 5px;
+        bottom: 3px
+    }
 }
 
-.gg-windows::before {
- content: "";
- position: absolute;
- width: 7px;
- height: 6px;
- background: currentColor;
- box-shadow: 8px 0 0,8px 7px 0,0 7px 0;
- transform: perspective(30px) rotateY(-30deg)
-} 
+@media screen {
+    .gg-windows {
+        transform: scale(var(--ggs,1))
+    }
+
+    .gg-windows, .gg-windows::before {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        width: 17px;
+        height: 15px
+    }
+
+    .gg-windows::before {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 6px;
+        background: currentColor;
+        box-shadow: 8px 0 0,8px 7px 0,0 7px 0;
+        transform: perspective(30px) rotateY(-30deg)
+    }
 }

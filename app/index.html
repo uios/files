@@ -6,7 +6,9 @@
         <link href="/cdn/css/gg.css" rel="stylesheet">
         <script src="/cdn/js/vanilla.js"></script>
         <script src="/cdn/js/mvc.js"></script>
+        <script src="/cdn/js/on.js"></script>
         <script src="/cdn/js/router.js"></script>
+        <script src="/cdn/js/touch.js"></script>
         <script src="/index.js"></script>
     </head>
     <body class="flex flex-direction-row flex-wrap-wrap" data-theme="meridiem">
@@ -15,24 +17,26 @@
             <row class="justify-content-space-between" data-width="100%">
                 <card class="-mobile-display-none">
                     <row>
-                        <ico>
-                            <n class="gg-arrow-left"></n>
-                        </ico>
-                    </row>
-                    <row>
-                        <ico>
-                            <n class="gg-arrow-right"></n>
-                        </ico>
-                    </row>
-                    <row>
-                        <ico>
-                            <n class="gg-arrow-up"></n>
-                        </ico>
+                        <box>
+                            <ico>
+                                <n class="gg-arrow-left"></n>
+                            </ico>
+                        </box>
+                        <box>
+                            <ico>
+                                <n class="gg-arrow-right"></n>
+                            </ico>
+                        </box>
+                        <box>
+                            <ico>
+                                <n class="gg-arrow-up"></n>
+                            </ico>
+                        </box>
                     </row>
                 </card>
                 <card class="box-sizing-border-box border-1px-solid flex-1 margin-2px">
                     <form class="background-color-fff flex height-100pc justify-center" onsubmit="on.submit.index.path(event)">
-                        <input id="address-bar-path" type="text" value="C:\">
+                        <input id="address-bar-path" type="text" value="cloud:\">
                         <input type="submit">
                     </form>
                 </card>
@@ -43,27 +47,61 @@
             <section>
                 <card>
                     <section>
-                        <header class="line-height-50px">
+                        <box class="line-height-50px" data-href="/">
                             <row>
                                 <ico>
-                                    <n class="gg-time"></n>
+                                    <n class="gg-home"></n>
                                 </ico>
-                                <text>Recent</text>
+                                <text>Home</text>
                             </row>
-                        </header>
+                        </box>
                     </section>
                 </card>
                 <card>
-                    <section>
-                        <header class="line-height-50px">
+                    <header>
+                        <box class="line-height-50px">
                             <row>
                                 <ico>
                                     <n class="gg-cloud"></n>
                                 </ico>
                                 <text>Cloud</text>
                             </row>
-                        </header>
-                        <box class="line-height-50px padding-left-50px">
+                        </box>
+                    </header>
+                    <section>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/audio/">
+                            <row>
+                                <ico>
+                                    <n class="gg-shopping-bag"></n>
+                                </ico>
+                                <text>Merch</text>
+                            </row>
+                        </box>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/home/">
+                            <row>
+                                <ico>
+                                    <n class="gg-browser"></n>
+                                </ico>
+                                <text>Desktop</text>
+                            </row>
+                        </box>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/files/">
+                            <row>
+                                <ico>
+                                    <n class="gg-file-document"></n>
+                                </ico>
+                                <text>Documents</text>
+                            </row>
+                        </box>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/uploads/">
+                            <row>
+                                <ico>
+                                    <n class="gg-software-upload"></n>
+                                </ico>
+                                <text>Uploads</text>
+                            </row>
+                        </box>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/audio/">
                             <row>
                                 <ico>
                                     <n class="gg-music"></n>
@@ -71,15 +109,7 @@
                                 <text>Audio</text>
                             </row>
                         </box>
-                        <box class="line-height-50px padding-left-50px">
-                            <row>
-                                <ico>
-                                    <n class="gg-file-document"></n>
-                                </ico>
-                                <text>Pages</text>
-                            </row>
-                        </box>
-                        <box class="line-height-50px padding-left-50px">
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/photo/">
                             <row>
                                 <ico>
                                     <n class="gg-image"></n>
@@ -87,7 +117,7 @@
                                 <text>Photo</text>
                             </row>
                         </box>
-                        <box class="line-height-50px padding-left-50px">
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/users/:username/video/">
                             <row>
                                 <ico>
                                     <n class="gg-film"></n>
@@ -95,35 +125,63 @@
                                 <text>Video</text>
                             </row>
                         </box>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/">
+                            <row>
+                                <ico>
+                                    <n class="gg-drive"></n>
+                                </ico>
+                                <text>Files</text>
+                            </row>
+                        </box>
                     </section>
                 </card>
                 <card>
-                    <section>
-                        <header class="line-height-50px">
+                    <header class="line-height-50px">
+                        <box>
                             <row>
                                 <ico>
                                     <n class="gg-google"></n>
                                 </ico>
                                 <text>Google</text>
                             </row>
-                        </header>
+                        </box>
+                    </header>
+                    <section>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/">
+                            <row>
+                                <ico>
+                                    <n class="gg-drive"></n>
+                                </ico>
+                                <text>Drive</text>
+                            </row>
+                        </box>
                     </section>
                 </card>
                 <card>
-                    <section>
-                        <header class="line-height-50px">
+                    <header>
+                        <box class="line-height-50px" data-href="/cloud/">
                             <row>
                                 <ico>
                                     <n class="gg-windows"></n>
                                 </ico>
                                 <text>Microsoft</text>
                             </row>
-                        </header>
+                        </box>
+                    </header>
+                    <section>
+                        <box class="line-height-50px padding-left-50px" data-href="/cloud/">
+                            <row>
+                                <ico>
+                                    <n class="gg-drive"></n>
+                                </ico>
+                                <text>OneDrive</text>
+                            </row>
+                        </box>
                     </section>
                 </card>
             </section>
         </nav>
-        <main class="background-color-666 flex-1 padding-top-50px scroll-y">
+        <main class="flex-1 padding-top-50px scroll-y">
             <page data-pages="/" data-width="100%">
                 <blocks data-page="/">
                     <block data-width="100%">
