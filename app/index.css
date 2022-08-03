@@ -270,6 +270,10 @@
         height: 60px;
     }
 
+    .height-100px, [data-height="100px"] {
+        height: 100px;
+    }
+
     .height-568px, [data-height="568px"] {
         height: 568px;
     }
@@ -497,6 +501,10 @@
         width: 60px;
     }
     
+    .width-100px, [data-width="100px"] {
+        width: 100px;
+    }
+    
     .width-300px, [data-width="300px"] {
         width: 300px;
     }
@@ -572,10 +580,9 @@
     }
 }
 
-/*Z-INDEX*/
+/*ZOOM*/
 @media screen {
-    [data-zoom="1.5"] {
-        zoom: 1.5; }
+    [data-zoom="1.5"] { zoom: 1.5; }
 }
 
 /*COLUMNS*/

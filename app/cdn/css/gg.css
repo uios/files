@@ -1,3 +1,7 @@
+.-ggs-2 {
+    --ggs: 2;
+}
+
 @media {
     .gg-arrow-left {
         box-sizing: border-box;

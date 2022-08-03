@@ -13,7 +13,7 @@ window.mvc.v = view = function(route) {
             const addressBarPath = byId('address-bar-path');
 
             var protocol = "cdn:";
-            if(get.length > 1) {
+            if(get.length > 0) {
                 protocol = get[0]+":";
             }
             var got = get;
