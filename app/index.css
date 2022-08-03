@@ -505,6 +505,10 @@
         width: 100px;
     }
     
+    .width-240px, [data-width="240px"] {
+        width: 240px;
+    }
+    
     .width-300px, [data-width="300px"] {
         width: 300px;
     }

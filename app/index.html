@@ -40,7 +40,12 @@
                         <input type="submit">
                     </form>
                 </card>
-                <card></card>
+                <card class="box-sizing-border-box border-1px-solid margin-2px width-240px">
+                    <form class="background-color-fff flex height-100pc justify-center" onsubmit="on.submit.index.path(event)">
+                        <input id="search-bar" placeholder="Search" type="text">
+                        <input type="submit">
+                    </form>
+                </card>
             </row>
         </header>
         <nav class="-mobile-width-100pct background-color-ccc padding-top-50px" data-width="320px">
@@ -188,7 +193,7 @@
                         <section>
                             <card>
                                 <section data-columns="5">
-                                    <box>
+                                    <box data-href="/cache/">
                                         <column>
                                             <ico data-height="100px" data-width="100px">
                                                 <n class="-ggs-2 gg-drive"></n>
@@ -196,7 +201,7 @@
                                             <text class="text-align-center" data-width="100px">Cache</text>
                                         </column>
                                     </box>
-                                    <box>
+                                    <box data-href="/cloud/">
                                         <column>
                                             <ico data-height="100px" data-width="100px">
                                                 <n class="-ggs-2 gg-cloud"></n>
@@ -204,7 +209,15 @@
                                             <text class="text-align-center" data-width="100px">Cloud</text>
                                         </column>
                                     </box>
-                                    <box>
+                                    <box data-href="/drive/">
+                                        <column>
+                                            <ico data-height="100px" data-width="100px">
+                                                <n class="-ggs-2 gg-google"></n>
+                                            </ico>
+                                            <text class="text-align-center" data-width="100px">Google</text>
+                                        </column>
+                                    </box>
+                                    <box data-href="/onedrive/">
                                         <column>
                                             <ico data-height="100px" data-width="100px">
                                                 <n class="-ggs-2 gg-windows"></n>
